@@ -1,11 +1,14 @@
----
-layout: ../layouts/BaseLayout.astro
-title: "Why Your Business Needs an AI Website in 2025"
-description: "Learn how AI-enhanced websites bring more leads, automate tasks, and boost sales."
----
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import CtaButton from '@/components/CtaButton.jsx';
 
-# Why Your Business Needs an AI Website in 2025
+export const title = "Why Your Business Needs an AI Website in 2025";
+export const description =
+  "Learn how AI-enhanced websites bring more leads, automate tasks, and boost sales.";
 
-Times have changed — your website can now answer customer questions, collect leads, and analyze sales **automatically**.
+<BaseLayout title={title} description={description}>
+  # Astro + AI: Faster sites, better leads
 
-<CtaButton client:visible label="Book Your Consultation" />
+  Astro ships HTML first, then hydrates **only** what needs JS.
+
+  <CtaButton client:visible label="Book Your Consultation" />
+</BaseLayout>

@@ -1,13 +1,36 @@
+---
 const {
   name = "Nicolai Agency",
   url = "https://www.nicolaiagency.com",
-  logo = "/logo-w-bg.png", // ✅ updated
-  telephone = "+1-540-322-7213",
+  logo = "/logo-w-bg.png",
+  telephone = "+1-000-000-0000",
   address = {
-    streetAddress: "123 Courthouse Rd",
+    streetAddress: "123 Main St",
     addressLocality: "Stafford",
     addressRegion: "VA",
     postalCode: "22554",
     addressCountry: "US",
   },
+  sameAs = [
+    "https://www.linkedin.com/in/your-handle",
+    "https://github.com/your-handle",
+  ],
 } = Astro.props;
+
+const siteUrl = Astro.site?.toString() || url;
+const logoUrl = new URL(logo, siteUrl).toString();
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name,
+  url: siteUrl,
+  logo: logoUrl,
+  telephone,
+  address,
+  sameAs,
+};
+---
+<script type="application/ld+json">
+  {JSON.stringify(schema)}
+</script>

@@ -1,0 +1,13 @@
+---
+layout: "../layouts/BaseLayout.astro"
+title: "Why Your Business Needs an AI Website in 2025"
+description: "Learn how AI-enhanced websites bring more leads, automate tasks, and boost sales."
+---
+
+import CtaButton from '../components/CtaButton.jsx';
+
+# Astro + AI: Faster sites, better leads
+
+Astro ships HTML first, then hydrates **only** what needs JS.
+
+<CtaButton client:visible label="Book Your Consultation" />
