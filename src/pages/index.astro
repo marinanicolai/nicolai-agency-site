@@ -1,16 +1,24 @@
 ---
+import BaseLayout from "../layout/BaseLayout.astro";
+import CtaButton from "../components/CtaButton.jsx";
 
+const title = "Nicolai Agency | AI Websites That Convert";
+const description =
+  "We create lightning-fast Astro sites with AI automations to boost leads and sales.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout {title} {description}>
+  <main class="mx-auto max-w-4xl p-6 space-y-8">
+    <section class="space-y-4 text-center">
+      <h1 class="text-5xl font-extrabold tracking-tight">
+        AI-Powered Websites for Small Businesses
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        We combine AI automation and SEO-friendly design to turn your visitors into paying customers.
+      </p>
+      <div class="flex justify-center">
+        <CtaButton client:idle label="Get My Free Website Audit" />
+      </div>
+    </section>
+  </main>
+</BaseLayout>
